@@ -15,7 +15,11 @@ class TaskBaseSerializer(serializers.ModelSerializer):
 
 
 class TaskReadSerializer(TaskBaseSerializer):
-    pass
+    groups = GroupSerializer(many=True)
+
+    class Meta:
+        model = models.Task
+        fields = ("id", 'title', "description", 'state', 'groups')
 
 
 class TaskWriteSerializer(TaskBaseSerializer):

@@ -1,10 +1,16 @@
 from django.db import models
 
+
 class Task(models.Model):
+    class YearInSchool(models.TextChoices):
+        TODO = 'todo'
+        IN_PROGRESS = 'in_progress'
+        COMPLETED = 'completed'
     title = models.CharField(blank=True, max_length=200)
     description = models.TextField(blank=True)
     state = models.CharField(
-        max_length=200
+        max_length=200,
+        choices=YearInSchool.choices
     )
     groups = models.ManyToManyField("Group", null=True, blank=True)
 
