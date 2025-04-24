@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(blank=True, max_length=200)),
                 ('description', models.TextField(blank=True)),
                 ('state', models.CharField(max_length=200)),
-                ('groups', models.ManyToManyField(blank=True, null=True, to='task.group')),
+                ('groups', models.ManyToManyField(blank=True, null=True, to='todo.group')),
             ],
             options={
                 'verbose_name': 'Task',
