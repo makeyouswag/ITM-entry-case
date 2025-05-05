@@ -12,14 +12,14 @@ class Todo(models.Model):
         max_length=200,
         choices=YearInSchool.choices
     )
-    groups = models.ManyToManyField("Group", null=True, blank=True)
+    groups = models.ManyToManyField("Group", blank=True)
 
     def __str__(self):
         return self.title
 
     class Meta:
-        verbose_name = "Task"
-        verbose_name_plural = "Tasks"
+        verbose_name = "Todo"
+        verbose_name_plural = "Todo"
         ordering = ['title']
 
 
