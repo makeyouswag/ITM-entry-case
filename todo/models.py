@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Task(models.Model):
+class Todo(models.Model):
     class YearInSchool(models.TextChoices):
         TODO = 'todo'
         IN_PROGRESS = 'in_progress'

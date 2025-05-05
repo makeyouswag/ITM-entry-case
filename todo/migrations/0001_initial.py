@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Task',
+            name='Todo',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(blank=True, max_length=200)),
@@ -29,8 +29,8 @@ class Migration(migrations.Migration):
                 ('groups', models.ManyToManyField(blank=True, null=True, to='todo.group')),
             ],
             options={
-                'verbose_name': 'Task',
-                'verbose_name_plural': 'Tasks',
+                'verbose_name': 'Todo',
+                'verbose_name_plural': 'Todo',
                 'ordering': ['title'],
             },
         ),
